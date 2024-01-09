@@ -10,6 +10,7 @@
 
     <!-- Title -->
     <title>Laravel 10 - Tasks list</title>
+    @yield('styles')
 
     <!-- Styles -->
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
@@ -20,6 +21,9 @@
         {{-- @include('partials.navbar') --}}
 
         <h1>@yield('title')</h1>
+        @if (session()->has('success'))
+            <div>{{ session('success') }}</div>
+        @endif
         <div>
             @yield('content')
         </div>
