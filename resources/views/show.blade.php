@@ -3,6 +3,9 @@
 @section('title', $task->title)
 
 @section('content')
+    <div>
+        <a href="{{ route('tasks.index') }}">Back</a>
+    </div>
     <p>{{ $task->description }}</p>
     @isset($task->long_description)
         <p>{{ $task->long_description }}</p>
